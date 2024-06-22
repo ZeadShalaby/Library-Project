@@ -27,7 +27,7 @@ class UserFactory extends Factory
             'gender' =>fake()->randomElement(['male', 'female']),
             'role' => Role::CUSTOMER,
             'birthday' => fake()->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null),
-
+            'totalBook' => fake()->numberBetween($min = 0, $max = 2000),
           /*
            todo  'profile_photo'=>$path,
            todo  'Personal_card'=>fake()->numberBetween($min = 10000000000000, $max = 900000000000),

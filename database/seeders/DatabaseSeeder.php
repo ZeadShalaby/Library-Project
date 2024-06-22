@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Book;
 use App\Models\Role;
 use App\Models\User;
+use App\Models\Department;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -49,5 +51,11 @@ class DatabaseSeeder extends Seeder
         ->count(19)
         ->create();
         $customer->push($defCustomer);
+
+        //// todo add Departments ////
+        $departments = Department::factory()->count(9)->create();
+
+        //// todo add Books ////
+        $books = Book::factory()->count(9)->create();
     }
 }

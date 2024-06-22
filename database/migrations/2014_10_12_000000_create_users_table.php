@@ -23,6 +23,7 @@ return new class extends Migration
             $table->bigInteger('phone')->unique()->nullable();
             $table->index('phone');
             $table->date('birthday')->nullable();
+            $table->bigInteger("totalBook");
             $table->timestamps();
         });
     }
